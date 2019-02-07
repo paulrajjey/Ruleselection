@@ -11,9 +11,16 @@ import org.kie.api.runtime.process.WorkItemManager;
 public class TaxonomyWorkItenHanlder implements java.io.Serializable {
 
     static final long serialVersionUID = 1L;
+    
+    private StatefulKnowledgeSession ksession;
 
     public TaxonomyWorkItenHanlder() {
     }
+    
+    public TaxonomyWorkItenHanlder(StatefulKnowledgeSession ksession) {
+        this.ksession = ksession;
+    }
+    
 
     public void abortWorkItem(WorkItem workItem, WorkItemManager manager) {
 		// TODO Auto-generated method stub
