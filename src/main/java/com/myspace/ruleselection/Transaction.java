@@ -6,12 +6,44 @@ package com.myspace.ruleselection;
 
 public class Transaction implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Transaction() {
-    }
+	private java.lang.String type;
+	private java.lang.String productCode;
+	private boolean eligibility;
 
+	public Transaction() {
+	}
 
+	public java.lang.String getType() {
+		return this.type;
+	}
 
+	public void setType(java.lang.String type) {
+		this.type = type;
+	}
+
+	public java.lang.String getProductCode() {
+		return this.productCode;
+	}
+
+	public void setProductCode(java.lang.String productCode) {
+		this.productCode = productCode;
+	}
+
+	public boolean isEligibility() {
+		return this.eligibility;
+	}
+
+	public void setEligibility(boolean eligibility) {
+		this.eligibility = eligibility;
+	}
+
+	public Transaction(java.lang.String type, java.lang.String productCode,
+			boolean eligibility) {
+		this.type = type;
+		this.productCode = productCode;
+		this.eligibility = eligibility;
+	}
 
 }
