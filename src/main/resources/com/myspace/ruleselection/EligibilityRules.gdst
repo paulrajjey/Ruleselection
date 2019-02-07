@@ -126,7 +126,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>IWC/UD</valueString>
+        <valueString>&quot;IWC/UD&quot;</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -160,17 +160,17 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>UD</valueString>
+        <valueString>&quot;IWC/UD&quot;</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>MUTUAL-FUNDS-PURCHASE</valueString>
+        <valueString>MUTUAL-FUNDS-EXCHANGE</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>15</valueString>
+        <valueString>6</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -194,22 +194,22 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>IWC</valueString>
+        <valueString>&quot;UD&quot;</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>MUTUAL-FUNDS-REDEEM</valueString>
+        <valueString>MUTUAL-FUNDS-PURCHASE</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>20</valueString>
+        <valueString>10</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>false</valueBoolean>
+        <valueBoolean>true</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
@@ -228,12 +228,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>UD</valueString>
+        <valueString>&quot;IWC&quot;</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>MUTUAL-FUNDS-EXCHANGE</valueString>
+        <valueString>MUTUAL-FUNDS-REDEEM</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -243,7 +243,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>false</valueBoolean>
+        <valueBoolean>true</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
