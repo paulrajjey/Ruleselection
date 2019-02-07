@@ -1,6 +1,6 @@
 [
   [
-    "name" : "MyTask", 
+    "name" : "Taxonomy", 
     "parameters" : [ 
         "MyFirstParam" : new StringDataType(), 
         "MySecondParam" : new StringDataType(), 
@@ -9,7 +9,7 @@
     "results" : [ 
         "Result" : new ObjectDataType("java.util.Map") 
     ], 
-    "displayName" : "My Task", 
+    "displayName" : "Taxonomy", 
     "icon" : "" 
   ]
 ]
