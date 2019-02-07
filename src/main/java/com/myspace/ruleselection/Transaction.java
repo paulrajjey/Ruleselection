@@ -12,6 +12,8 @@ public class Transaction implements java.io.Serializable {
 	private java.lang.String productCode;
 	private boolean eligibility;
 
+	private java.lang.String channel;
+
 	public Transaction() {
 	}
 
@@ -39,11 +41,20 @@ public class Transaction implements java.io.Serializable {
 		this.eligibility = eligibility;
 	}
 
+	public java.lang.String getChannel() {
+		return this.channel;
+	}
+
+	public void setChannel(java.lang.String channel) {
+		this.channel = channel;
+	}
+
 	public Transaction(java.lang.String type, java.lang.String productCode,
-			boolean eligibility) {
+			boolean eligibility, java.lang.String channel) {
 		this.type = type;
 		this.productCode = productCode;
 		this.eligibility = eligibility;
+		this.channel = channel;
 	}
 
 }
