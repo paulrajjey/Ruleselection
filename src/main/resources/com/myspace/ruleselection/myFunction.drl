@@ -15,12 +15,12 @@ function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
 
 function boolean checkTaxonomy1(KnowledgeHelper kdrools ) {
 
-   /* String tx = (String)kdrools.getKieRuntime().getGlobal("Taxonomy");//channel
+   String tx = (String)kdrools.getKieRuntime().getGlobal("Taxonomy");//channel
     System.out.println("Taxonomy" + tx);
     String txValue = (String)kdrools.getKieRuntime().getGlobal("TaxonomyValue");//ID
      System.out.println("TaxonomyValue" + txValue);
     Map<String, Object> metaData =  kdrools.getRule().getMetaData();
-    boolean enabled = ( (List)metaData.get(tx) ).contains(txValue);*/
+    boolean enabled = ( (List)metaData.get(tx) ).contains(txValue);
 
     return true;
     
