@@ -1,0 +1,7 @@
+import org.drools.spi.KnowledgeHelper;
+
+function boolean checkTaxonomy(KnowledgeHelper drools) {
+    
+    
+    return "Hello "+name+"!";
+}
