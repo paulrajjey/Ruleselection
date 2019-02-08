@@ -3,6 +3,7 @@ package com.myspace.ruleselection;
 //import org.drools.runtime.rule.RuleContext;
 import org.drools.core.spi.KnowledgeHelper;
 import java.util.Map;
+import java.util.List;
 function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
 
     String tx = (String)kdrools.getKieRuntime().getGlobal(taxonomy);
@@ -18,7 +19,7 @@ function boolean checkTaxonomy1(KnowledgeHelper kdrools ) {
     String txValue = (String)kdrools.getKieRuntime().getGlobal("TaxonomyValue");//IWC
     Map<String, Object> metaData =  kdrools.getRule().getMetaData();
     boolean enabled = false;
-    if (metaData.get(tx).contains(txValue)) {
+    if ( (List)metaData[tx].contains(txValue) ) {
         
         enabled = true;
         
