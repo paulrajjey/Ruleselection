@@ -4,8 +4,8 @@ package com.myspace.ruleselection;
 import java.util.Map;
 import java.util.List;
 
-//global java.lang.String Taxonomy;
-//global java.lang.String TaxonomyValue;
+global java.lang.String Taxonomy;
+global java.lang.String TaxonomyValue;
 
 //function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
 function boolean checkTaxonomy(Object channel , String taxonomy) {
