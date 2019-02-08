@@ -45,6 +45,11 @@
       <version>7.14.0.Final-redhat-00002</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>redhat.poc.workitems</groupId>
+      <artifactId>tiaaworkitem</artifactId>
+      <version>1.0</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
