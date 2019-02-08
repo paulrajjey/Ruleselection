@@ -2,7 +2,7 @@ package com.myspace.ruleselection;
 
 import org.drools.spi.KnowledgeHelper;
 
-function boolean checkTaxonomy(KnowledgeHelper droolscontext,String taxonomy) {
+function boolean checkTaxonomy(KnowledgeHelper droolscontext, String taxonomy) {
     
     String taxonomyvalue = (String) droolscontext.getGlobal(taxonomy);
     
