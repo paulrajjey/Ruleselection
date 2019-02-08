@@ -35,12 +35,12 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		
 		ksession.setGlobal("Taxonomy", taxonomy);
 		ksession.setGlobal("TaxonomyValue", taxonomyValue);
-		KieCommands commandsFactory = KieServices.Factory.get().getCommands();
+	/*	KieCommands commandsFactory = KieServices.Factory.get().getCommands();
 		Command<?> fireAllRules = commandsFactory.newFireAllRules();
 		
 		 Command<?> batchCommand =
-		 commandsFactory.newBatchExecution(Arrays.asList(fireAllRules));
-		//ksession.fireAllRules();
+		 commandsFactory.newBatchExecution(Arrays.asList(fireAllRules));*/
+		ksession.fireAllRules();
 		   
 	    manager.completeWorkItem(workItem.getId(), null);
 
