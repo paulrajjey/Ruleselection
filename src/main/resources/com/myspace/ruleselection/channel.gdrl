@@ -1,2 +1,4 @@
 package com.myspace.ruleselection;
 
+global java.lang.String channel;
+global java.lang.String channelValue;
