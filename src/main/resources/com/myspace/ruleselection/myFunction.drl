@@ -9,8 +9,8 @@ import java.util.List;
 global java.lang.String Taxonomy;
 global java.lang.String TaxonomyValue;
 
-function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
-//function boolean checkTaxonomy(RuleContext kdrools , String taxonomy) {
+//function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
+function boolean checkTaxonomy(RuleContext kdrools , String taxonomy) {
 
   /*Object tx1 = kdrools.getKieRuntime().getGlobal("Taxonomy");//channel
     System.out.println("Taxonomy" + tx1);
