@@ -6,9 +6,19 @@ import java.util.Map;
 import java.util.List;
 function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
 
-    String tx = (String)kdrools.getKieRuntime().getGlobal(taxonomy);
-    
-    return true;
+   String tx = (String)kdrools.getKieRuntime().getGlobal("Taxonomy");//channel
+    System.out.println("Taxonomy" + tx);
+    String txValue = (String)kdrools.getKieRuntime().getGlobal("TaxonomyValue");//ID
+     System.out.println("TaxonomyValue" + txValue);
+     boolean enabled = false;
+     
+    if ("UD".equals(taxonomy)){
+         boolean enabled = true;
+    }else {
+
+         boolean enabled = false;
+    }
+    return enabled;
     
     
 }
