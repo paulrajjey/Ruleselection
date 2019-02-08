@@ -35,7 +35,7 @@ function boolean checkTaxonomy1(KnowledgeHelper kdrools ) {
 //from row number: 1
 rule "Row 1 EligibilityRules"
 	@channel("IWC","UD")
-    enabled(checkTaxonomy1(drools)
+    enabled(checkTaxonomy1(drools))
 	dialect "mvel"
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-COST-BASIS-SETTINGS" , productCode == "10" )
@@ -47,7 +47,7 @@ end
 rule "Row 2 EligibilityRules"
 	@channel("IWC","UD")
 	dialect "mvel"
-	enabled(checkTaxonomy1(drools)
+	enabled(checkTaxonomy1(drools))
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-EXCHANGE" , productCode == "6" )
 	then
@@ -67,7 +67,7 @@ end
 
 //from row number: 4
 rule "Row 4 EligibilityRules"
-    enabled(checkTaxonomy1(drools)
+    enabled(checkTaxonomy1(drools))
 	@channel("IWC")
 	dialect "mvel"
 	when
