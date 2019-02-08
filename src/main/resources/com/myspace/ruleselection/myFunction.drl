@@ -16,6 +16,16 @@ function boolean checkTaxonomy(Object channel , String taxonomy) {
   
 }
 
+rule "Initialize"
+	dialect "mvel"
+//	ruleflow-group "initialize"
+    @channel(value = {"IN"})
+	when
+		exists (Transaction( )) 
+	then
+		System.out.println("Initialization rule fired");
+end
+
 //from row number: 1
 rule "Row 1 EligibilityRules"
 	@channel(value = {"IWC","UD"})
