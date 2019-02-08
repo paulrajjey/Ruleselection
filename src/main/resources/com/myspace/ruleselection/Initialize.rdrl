@@ -4,6 +4,7 @@ import java.lang.Number;
 
 rule "Initialize"
 	dialect "mvel"
+	ruleflow-group "initialize"
 	when
 		not (Transaction( this != null )) 
 	then
