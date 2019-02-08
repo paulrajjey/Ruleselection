@@ -11,16 +11,16 @@ global java.lang.String Taxonomy;
 global java.lang.String TaxonomyValue;
 
 //function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
-function boolean checkTaxonomy(RuleContext kdrools , String taxonomy) {
+function boolean checkTaxonomy(Map metaData , String taxonomy) {
 
   /*Object tx1 = kdrools.getKieRuntime().getGlobal("Taxonomy");//channel
     System.out.println("Taxonomy" + tx1);
     Object txValue1 = kdrools.getKieRuntime().getGlobal("TaxonomyValue");//ID
      System.out.println("TaxonomyValue" + txValue1);*/
-      System.out.println("meta Rules " + kdrools.getRule() );
-     Map<String, Object> metaData =  kdrools.getRule().getMetaData();
+    //  System.out.println("meta Rules " + kdrools.getRule() );
+     //Map<String, Object> metaData =  kdrools.getRule().getMetaData();
      
-     System.out.println("meta data " + kdrools.getRule().getName() + "-" + (List)metaData.get("channel")  );
+    // System.out.println("meta data " + kdrools.getRule().getName() + "-" + (List)metaData.get("channel")  );
      
      boolean isenabled = ( (List)metaData.get("channel") ).contains(taxonomy);
     
@@ -46,7 +46,7 @@ function boolean checkTaxonomy(RuleContext kdrools , String taxonomy) {
 rule "Row 1 EligibilityRules"
 	@channel("IWC","UD")
     //enabled(checkTaxonomy1(drools,TaxonomyValue))
-    enabled(checkTaxonomy(kcontext,TaxonomyValue))
+    enabled(checkTaxonomy(metaData,TaxonomyValue))
 	dialect "mvel"
 	ruleflow-group "Eligibility"
 	when
