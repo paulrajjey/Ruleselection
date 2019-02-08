@@ -41,6 +41,7 @@ end
 rule "Row 2 EligibilityRules"
 	@channel("IWC","UD")
 	dialect "mvel"
+	 enabled(checkTaxonomy1(drools))
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-EXCHANGE" , productCode == "6" )
 	then
@@ -51,6 +52,7 @@ end
 rule "Row 3 EligibilityRules"
 	@channel("UD")
 	dialect "mvel"
+	 enabled(checkTaxonomy1(drools))
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-PURCHASE" , productCode == "10" )
 	then
@@ -62,6 +64,7 @@ rule "Row 4 EligibilityRules"
    
 	@channel("IWC")
 	dialect "mvel"
+	 enabled(checkTaxonomy1(drools))
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-REDEEM" , productCode == "20" )
 	then
