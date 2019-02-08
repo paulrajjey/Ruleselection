@@ -4,6 +4,7 @@ package com.myspace.ruleselection;
 import org.drools.core.spi.KnowledgeHelper;
 
 function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
+    kdrools.getGloble(taxonomy);
     
     return true;
     
