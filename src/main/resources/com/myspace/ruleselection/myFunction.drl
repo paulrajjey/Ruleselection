@@ -17,9 +17,11 @@ function boolean checkTaxonomy(Object channel , String taxonomy) {
 }
 
 rule "Initialize"
-	dialect "mvel"
+
 //	ruleflow-group "initialize"
     @channel(value = {"IN"})
+    enabled( checkTaxonomy(rule.metaData["channel"], TaxonomyValue))
+    	dialect "mvel"
 	when
 		exists (Transaction( )) 
 	then
