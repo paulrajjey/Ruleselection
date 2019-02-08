@@ -2,7 +2,7 @@
   <kbase name="kbase" default="true" eventProcessingMode="stream" equalsBehavior="identity">
     <ksession name="Ruleselection" type="stateful" default="true" clockType="realtime">
       <workItemHandlers>
-        <workItemHandler type="com.myspace.ruleselection.TaxonomyWorkItemHandler(ksession)" name="Taxonomy"/>
+        <workItemHandler type="com.myspace.ruleselection.TaxonomyWorkItemHandler(ksession,classloader)" name="Taxonomy"/>
       </workItemHandlers>
       <listeners>
         <agendaEventListener type="com.workitem.AgentaLister"/>
