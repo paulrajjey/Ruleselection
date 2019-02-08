@@ -14,7 +14,7 @@ function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
 
 function boolean checkTaxonomy1(KnowledgeHelper kdrools ) {
 
-    String tx = (String)kdrools.getKieRuntime().getGlobal("UD");
+    String tx = (String)kdrools.getKieRuntime().getGlobal("channel");
     
     return true;
     
