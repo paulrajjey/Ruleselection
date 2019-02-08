@@ -1,16 +1,16 @@
 package com.myspace.ruleselection;
 
 
-//import org.drools.core.spi.KnowledgeHelper;
-import org.kie.api.runtime.rule.RuleContext;
+import org.drools.core.spi.KnowledgeHelper;
+//import org.kie.api.runtime.rule.RuleContext;
 import java.util.Map;
 import java.util.List;
 
 global java.lang.String Taxonomy;
 global java.lang.String TaxonomyValue;
 
-//function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
-function boolean checkTaxonomy(RuleContext kdrools , String taxonomy) {
+function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
+//function boolean checkTaxonomy(RuleContext kdrools , String taxonomy) {
 
   /*Object tx1 = kdrools.getKieRuntime().getGlobal("Taxonomy");//channel
     System.out.println("Taxonomy" + tx1);
