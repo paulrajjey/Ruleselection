@@ -12,12 +12,12 @@ function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
      System.out.println("TaxonomyValue" + txValue1);
      boolean isenabled = false;
      
-    if ("UD".equals(taxonomy)){
-         boolean isenabled = true;
-    }else {
+    //if ("UD".equals(taxonomy)){
+      //   boolean isenabled = true;
+   // }else {
 
-         boolean isenabled = false;
-    }
+    //     boolean isenabled = false;
+  //  }
     return isenabled;
     
     
