@@ -8,18 +8,13 @@ import java.util.List;
 //function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
 function boolean checkTaxonomy(RuleContext kdrools , String taxonomy) {
 
-  /* Object tx1 = kdrools.getKieRuntime().getGlobal("Taxonomy");//channel
+  /*Object tx1 = kdrools.getKieRuntime().getGlobal("Taxonomy");//channel
     System.out.println("Taxonomy" + tx1);
     Object txValue1 = kdrools.getKieRuntime().getGlobal("TaxonomyValue");//ID
      System.out.println("TaxonomyValue" + txValue1);*/
-     boolean isenabled = false;
-     
-    if ("UD".equals(taxonomy)){
-       isenabled = true;
-    }else {
-
-     isenabled = false;
-    }
+     Map<String, Object> metaData =  kdrools.getRule().getMetaData()
+     boolean isenabled = ( (List)metaData.get("channel") ).contains(taxonomy);
+    
     return isenabled;
   
 }
@@ -41,8 +36,8 @@ function boolean checkTaxonomy1(RuleContext kdrools ) {
 //from row number: 1
 rule "Row 1 EligibilityRules"
 	@channel("IWC","UD")
-   // enabled(checkTaxonomy1(drools))
-    enabled(checkTaxonomy(kcontext,"UD"))
+    enabled(checkTaxonomy1(drools,TaxonomyValue))
+    //enabled(checkTaxonomy(kcontext,"UD"))
 	dialect "mvel"
 	ruleflow-group "Eligibility"
 	when
