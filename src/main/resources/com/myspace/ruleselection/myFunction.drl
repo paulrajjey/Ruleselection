@@ -19,7 +19,7 @@ function boolean checkTaxonomy1(KnowledgeHelper kdrools ) {
     String txValue = (String)kdrools.getKieRuntime().getGlobal("TaxonomyValue");//IWC
     Map<String, Object> metaData =  kdrools.getRule().getMetaData();
     boolean enabled = false;
-    if ( (List)metaData[tx].contains(txValue) ) {
+    if ( ((List)metaData[tx]).contains(txValue) ) {
         
         enabled = true;
         
