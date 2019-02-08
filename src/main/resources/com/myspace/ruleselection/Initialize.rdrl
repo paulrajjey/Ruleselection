@@ -8,4 +8,5 @@ rule "Initialize"
 	when
 		exists (Transaction( )) 
 	then
+		System.out.println("Initialization rule fired");
 end
