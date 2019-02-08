@@ -2,7 +2,7 @@
   <kbase name="kbase" default="true" eventProcessingMode="stream" equalsBehavior="identity">
     <ksession name="ksession" type="stateful" default="true" clockType="realtime">
       <workItemHandlers>
-        <workItemHandler type="Taxonomy" name="new com.workitem.TaxonomyWorkItenHanlder(ksession)"/>
+        <workItemHandler type="Taxonomy" name="com.workitem.TaxonomyWorkItenHanlder(ksession)"/>
       </workItemHandlers>
       <listeners>
         <agendaEventListener type="com.workitem.AgentaLister"/>
