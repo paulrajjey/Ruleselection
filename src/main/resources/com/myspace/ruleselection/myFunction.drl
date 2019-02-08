@@ -17,7 +17,7 @@ function boolean checkTaxonomy(RuleContext kdrools , String taxonomy) {
     System.out.println("Taxonomy" + tx1);
     Object txValue1 = kdrools.getKieRuntime().getGlobal("TaxonomyValue");//ID
      System.out.println("TaxonomyValue" + txValue1);*/
-      System.out.println("meta Rules " + kdrools.getRule().getName()  );
+      System.out.println("meta Rules " + kdrools.getRule() );
      Map<String, Object> metaData =  kdrools.getRule().getMetaData();
      
      System.out.println("meta data " + kdrools.getRule().getName() + "-" + (List)metaData.get("channel")  );
