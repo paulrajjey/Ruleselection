@@ -4,7 +4,8 @@
     "parameters" : [ 
         "taxonomy" : new StringDataType(), 
         "value" : new StringDataType(), 
-        "param" : new ObjectDataType() 
+        "param1" : new ObjectDataType(),
+        "param2" : new StringDataType(), 
     ], 
     "results" : [ 
         "Result" : new ObjectDataType("java.util.Map") 
