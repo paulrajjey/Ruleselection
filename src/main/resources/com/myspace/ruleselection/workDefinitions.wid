@@ -2,9 +2,9 @@
   [
     "name" : "Taxonomy", 
     "parameters" : [ 
-        "MyFirstParam" : new StringDataType(), 
-        "MySecondParam" : new StringDataType(), 
-        "MyThirdParam" : new ObjectDataType() 
+        "taxonomy" : new StringDataType(), 
+        "value" : new StringDataType(), 
+        "param" : new ObjectDataType() 
     ], 
     "results" : [ 
         "Result" : new ObjectDataType("java.util.Map") 
