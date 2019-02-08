@@ -32,7 +32,7 @@ rule "Row 1 EligibilityRules"
 	dialect "mvel"
 	ruleflow-group "Eligibility"
 	when
-		trans : Transaction( type == "MUTUAL-FUNDS-COST-BASIS-SETTINGS" , productCode == "10" )
+		trans : Transaction(  productCode == "10" )
 	then
 		trans.setEligibility( true );
 end
@@ -56,7 +56,7 @@ rule "Row 3 EligibilityRules"
 	 enabled(checkTaxonomy1(drools))
 	 ruleflow-group "Eligibility"
 	when
-		trans : Transaction( type == "MUTUAL-FUNDS-PURCHASE" , productCode == "10" )
+		trans : Transaction( type == "MUTUAL-FUNDS-COST-BASIS-SETTINGS" , productCode == "10" )
 	then
 		trans.setEligibility( true );
 end
