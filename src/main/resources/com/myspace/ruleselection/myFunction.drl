@@ -3,10 +3,12 @@ package com.myspace.ruleselection;
 //import org.drools.runtime.rule.RuleContext;
 import org.drools.core.spi.KnowledgeHelper;
 
-//function boolean checkTaxonomy(RuleContext kdrools , String taxonomy) {
+function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
     
-  //  return true;
-//}
+    return true;
+    
+    
+}
 
 //from row number: 1
 rule "Row 1 EligibilityRules"
