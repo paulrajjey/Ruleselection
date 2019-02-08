@@ -1,6 +1,7 @@
 package com.myspace.ruleselection;
 
 //import org.drools.runtime.rule.RuleContext;
+import org.drools.core.spi.KnowledgeHelper;
 
 //function boolean checkTaxonomy(RuleContext kdrools , String taxonomy) {
     
