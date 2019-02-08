@@ -24,7 +24,7 @@ function boolean checkTaxonomy1(KnowledgeHelper kdrools ) {
 //from row number: 1
 rule "Row 1 EligibilityRules"
 	@channel("IWC/UD")
-    enabled(checkTaxonomy(drools,"iwc"))
+    enabled(checkTaxonomy1(drools,"iwc"))
 	dialect "mvel"
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-COST-BASIS-SETTINGS" , productCode == "10" )
