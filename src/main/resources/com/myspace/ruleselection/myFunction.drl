@@ -10,15 +10,15 @@ function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
     System.out.println("Taxonomy" + tx1);
     String txValue1 = (String)kdrools.getKieRuntime().getGlobal("TaxonomyValue");//ID
      System.out.println("TaxonomyValue" + txValue1);
-     boolean enabled = false;
+     boolean isenabled = false;
      
     if ("UD".equals(taxonomy)){
-         boolean enabled = true;
+         boolean isenabled = true;
     }else {
 
-         boolean enabled = false;
+         boolean isenabled = false;
     }
-    return enabled;
+    return isenabled;
     
     
 }
