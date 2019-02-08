@@ -14,10 +14,11 @@ function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
 
 function boolean checkTaxonomy1(KnowledgeHelper kdrools ) {
 
-    String tx = (String)kdrools.getKieRuntime().getGlobal("channel");
+    String tx = (String)kdrools.getKieRuntime().getGlobal("Taxonomy");
+    String txValue = (String)kdrools.getKieRuntime().getGlobal("TaxonomyValue");
     Map<String, Object> metaData =  kdrools.getRule().getMetaData();
     boolean enabled = false;
-    if (metaData.containsKey(tx)) {
+    if (metaData.get(tx).contains(txValue)) {
         
         enabled = true;
         
