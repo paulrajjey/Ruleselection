@@ -23,7 +23,7 @@ function boolean checkTaxonomy(RuleContext kdrools , String taxonomy) {
   
 }
 
-function boolean checkTaxonomy1(RuleContext kdrools ) {
+/*function boolean checkTaxonomy1(RuleContext kdrools ) {
 
     Object tx = kdrools.getKieRuntime().getGlobal("Taxonomy");//channel
     System.out.println("Taxonomy" + tx);
@@ -35,7 +35,7 @@ function boolean checkTaxonomy1(RuleContext kdrools ) {
     return enabled;
     
     
-}
+}*/
 
 //from row number: 1
 rule "Row 1 EligibilityRules"
