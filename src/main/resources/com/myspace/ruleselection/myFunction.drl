@@ -9,7 +9,6 @@ global java.lang.String TaxonomyValue;
 
 function boolean checkTaxonomy(Object channel , String taxonomy) {
 
-
      List channels = (List)channel;
      boolean isenabled = channels.contains(taxonomy);
     
