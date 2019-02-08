@@ -40,7 +40,21 @@ function boolean checkTaxonomy1(KnowledgeHelper kdrools ) {
 //from row number: 1
 rule "Row 1 EligibilityRules"
 	@channel("IWC","UD")
-    enabled(checkTaxonomy1(drools))
+   // enabled(checkTaxonomy1(drools))
+    enabled(checkTaxonomy(drools,"UD"))
+	dialect "mvel"
+	ruleflow-group "Eligibility"
+	when
+		trans : Transaction(  productCode == "10" )
+	then
+		trans.setEligibility( true );
+end
+
+//from row number: 1
+rule "Row 1 EligibilityRulesDuplicate"
+	@channel("IWC","UD")
+   // enabled(checkTaxonomy1(drools))
+    enabled(checkTaxonomy(drools,"IWC"))
 	dialect "mvel"
 	ruleflow-group "Eligibility"
 	when
@@ -54,7 +68,8 @@ rule "Row 2 EligibilityRules"
 	@channel("IWC","UD")
 	dialect "mvel"
 	ruleflow-group "Eligibility"
-	 enabled(checkTaxonomy1(drools))
+	 //enabled(checkTaxonomy1(drools))
+	  enabled(checkTaxonomy(drools,"IWC"))
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-EXCHANGE" , productCode == "6" )
 	then
@@ -65,7 +80,8 @@ end
 rule "Row 3 EligibilityRules"
 	@channel("UD")
 	dialect "mvel"
-	 enabled(checkTaxonomy1(drools))
+	 //enabled(checkTaxonomy1(drools))
+	  enabled(checkTaxonomy(drools,"UD"))
 	 ruleflow-group "Eligibility"
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-COST-BASIS-SETTINGS" , productCode == "10" )
@@ -78,7 +94,8 @@ rule "Row 4 EligibilityRules"
    
 	@channel("IWC")
 	dialect "mvel"
-	 enabled(checkTaxonomy1(drools))
+	 //enabled(checkTaxonomy1(drools))
+	 enabled(checkTaxonomy(drools,"IWC"))
 	 ruleflow-group "Eligibility"
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-REDEEM" , productCode == "20" )
