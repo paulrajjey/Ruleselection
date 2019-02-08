@@ -5,7 +5,8 @@ import org.drools.core.spi.KnowledgeHelper;
 
 function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
 
-    kdrools.getKieRuntime().getGlobal(taxonomy);
+    String tx = (String)kdrools.getKieRuntime().getGlobal(taxonomy);
+    
     return true;
     
     
@@ -14,7 +15,7 @@ function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
 //from row number: 1
 rule "Row 1 EligibilityRules"
 	@channel("IWC/UD")
-
+    enabled(checkTaxonomy(drools,"iwc"))
 	dialect "mvel"
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-COST-BASIS-SETTINGS" , productCode == "10" )
