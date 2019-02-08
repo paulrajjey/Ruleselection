@@ -5,5 +5,10 @@ import java.lang.Number;
 rule "Initialize"
 	dialect "mvel"
 	when
+		not (Transaction( this != null )) 
 	then
+		Transaction fact0 = new Transaction();
+		fact0.setType( "MUTUAL-FUNDS-COST-BASIS-SETTINGS" );
+		fact0.setProductCode( "10" );
+		insertLogical( fact0 );
 end
