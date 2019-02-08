@@ -67,9 +67,10 @@ end
 
 //from row number: 4
 rule "Row 4 EligibilityRules"
-    enabled(checkTaxonomy1(drools))
+   
 	@channel("IWC")
 	dialect "mvel"
+	enabled(checkTaxonomy1(drools))
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-REDEEM" , productCode == "20" )
 	then
