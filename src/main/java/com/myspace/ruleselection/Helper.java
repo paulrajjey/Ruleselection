@@ -14,7 +14,7 @@ public class Helper implements java.io.Serializable {
 
     
     
-       public static boolean checkTaxonomy(RuleContext ruleCont , String value){
+       public static boolean checkTaxonomy(KnowledgeHelper ruleCont , String value){
            
            return true;
            
