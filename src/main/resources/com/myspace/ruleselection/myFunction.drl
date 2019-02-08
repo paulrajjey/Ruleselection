@@ -53,7 +53,7 @@ end
 
 //from row number: 1
 rule "Row 1 EligibilityRulesforIWC"
-	@channel("IWC","UD")
+	@channel("IWC")
    // enabled(checkTaxonomy1(drools))
      enabled(checkTaxonomy(kcontext,TaxonomyValue))
 	dialect "mvel"
