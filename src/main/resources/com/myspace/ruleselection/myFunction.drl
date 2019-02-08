@@ -1,7 +1,7 @@
 package com.myspace.ruleselection;
 
 
-//import org.drools.core.spi.KnowledgeHelper;
+import org.drools.core.spi.KnowledgeHelper;
 import java.util.Map;
 import java.util.List;
 import org.kie.api.runtime.rule.RuleContext;
