@@ -18,13 +18,13 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 
     static final long serialVersionUID = 1L;
     
-    //private KieSession ksession;
-    private StatelessKieSession ksession;
+    private KieSession ksession;
+    //private StatelessKieSession ksession;
     
     public TaxonomyWorkItemHandler() {
     }
     
-    public TaxonomyWorkItemHandler(StatelessKieSession ksession) {
+    public TaxonomyWorkItemHandler(KieSession ksession) {
         this.ksession = ksession;
     }
 
