@@ -20,7 +20,7 @@ function boolean checkTaxonomy(RuleContext kdrools , String taxonomy) {
      Map<String, Object> metaData =  kdrools.getRule().getMetaData();
      boolean isenabled = ( (List)metaData.get("channel") ).contains(taxonomy);
     
-    return false;;
+    return false;
   
 }
 
