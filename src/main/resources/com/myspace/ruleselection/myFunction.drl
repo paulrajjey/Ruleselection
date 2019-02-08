@@ -51,7 +51,7 @@ rule "Row 1 EligibilityRules"
 end
 
 //from row number: 1
-rule "Row 1 EligibilityRulesDuplicate"
+rule "Row 1 EligibilityRulesforIWC"
 	@channel("IWC","UD")
    // enabled(checkTaxonomy1(drools))
     enabled(checkTaxonomy(drools,"IWC"))
