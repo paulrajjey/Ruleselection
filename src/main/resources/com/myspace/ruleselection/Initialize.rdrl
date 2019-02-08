@@ -1,0 +1,9 @@
+package com.myspace.ruleselection;
+
+import java.lang.Number;
+
+rule "Initialize"
+	dialect "mvel"
+	when
+	then
+end
