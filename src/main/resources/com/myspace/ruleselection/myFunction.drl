@@ -3,8 +3,6 @@ package com.myspace.ruleselection;
 
 function boolean checkTaxonomy( org.drools.runtime.rule.RuleContext.RuleContext kdrools , String taxonomy) {
     
-   //String taxonomyvalue = (String) droolscontext.getGlobal(taxonomy);
-    
     return true;
 }
 
