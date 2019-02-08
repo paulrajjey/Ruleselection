@@ -20,7 +20,6 @@ function boolean checkTaxonomy1(KnowledgeHelper kdrools ) {
     Map<String, Object> metaData =  kdrools.getRule().getMetaData();
     boolean enabled = ( (List)metaData.get(tx) ).contains(txValue);
 
-   
     return true;
     
     
