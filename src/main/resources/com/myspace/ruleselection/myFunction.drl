@@ -18,10 +18,10 @@ function boolean checkTaxonomy1(KnowledgeHelper kdrools ) {
     String tx = (String)kdrools.getKieRuntime().getGlobal("Taxonomy");//channel
     String txValue = (String)kdrools.getKieRuntime().getGlobal("TaxonomyValue");//IWC
     Map<String, Object> metaData =  kdrools.getRule().getMetaData();
-    boolean enabled = ((List)metaData[tx]).contains(txValue);
+   // boolean enabled = ((List)metaData[tx]).contains(txValue);
 
    
-    return enabled;
+    return true;
     
     
 }
