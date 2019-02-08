@@ -45,7 +45,7 @@ function boolean checkTaxonomy(Object channel , String taxonomy) {
 rule "Row 1 EligibilityRules"
 	@channel(value = {"IWC","UD"})
     //enabled(checkTaxonomy1(drools,TaxonomyValue))
-    enabled(checkTaxonomy(rule.metaData["channel"],TaxonomyValue))
+    enabled( checkTaxonomy(rule.metaData["channel"], TaxonomyValue))
 	dialect "mvel"
 	ruleflow-group "Eligibility"
 	when
@@ -58,7 +58,7 @@ end
 rule "Row 1 EligibilityRulesforIWC"
 	@channel(value = {"IWC"})
    // enabled(checkTaxonomy1(drools))
-     enabled(checkTaxonomy(rule.metaData["channel"],TaxonomyValue))
+     enabled( checkTaxonomy(rule.metaData["channel"] , TaxonomyValue ))
 	dialect "mvel"
 	ruleflow-group "Eligibility"
 	when
@@ -73,7 +73,7 @@ rule "Row 2 EligibilityRules"
 	dialect "mvel"
 	ruleflow-group "Eligibility"
 	 //enabled(checkTaxonomy1(drools))
-	  enabled(checkTaxonomy(rule.metaData["channel"],TaxonomyValue))
+	  enabled( checkTaxonomy(rule.metaData["channel"] , TaxonomyValue ))
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-EXCHANGE" , productCode == "6" )
 	then
@@ -85,7 +85,7 @@ rule "Row 3 EligibilityRules"
 	@channel(value = {"UD"})
 	dialect "mvel"
 	 //enabled(checkTaxonomy1(drools))
-	  enabled(checkTaxonomy(rule.metaData["channel"],TaxonomyValue))
+	  enabled(checkTaxonomy( rule.metaData["channel"] , TaxonomyValue ))
 	 ruleflow-group "Eligibility"
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-COST-BASIS-SETTINGS" , productCode == "10" )
@@ -99,7 +99,7 @@ rule "Row 4 EligibilityRules"
 	@channel(value = {"IWC"})
 	dialect "mvel"
 	 //enabled(checkTaxonomy1(drools))
-	  enabled(checkTaxonomy(rule.metaData["channel"],TaxonomyValue))
+	  enabled(checkTaxonomy(rule.metaData["channel"] , TaxonomyValue ) )
 	 ruleflow-group "Eligibility"
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-REDEEM" , productCode == "20" )
