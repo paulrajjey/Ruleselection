@@ -2,10 +2,10 @@ package com.myspace.ruleselection;
 
 import org.drools.runtime.rule.RuleContext;
 
-function boolean checkTaxonomy(RuleContext kdrools , String taxonomy) {
+//function boolean checkTaxonomy(RuleContext kdrools , String taxonomy) {
     
-    return true;
-}
+  //  return true;
+//}
 
 //from row number: 1
 rule "Row 1 EligibilityRules"
