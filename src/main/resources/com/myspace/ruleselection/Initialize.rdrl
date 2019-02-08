@@ -6,10 +6,6 @@ rule "Initialize"
 	dialect "mvel"
 	ruleflow-group "initialize"
 	when
-		not (Transaction( this != null )) 
+		exists (Transaction( )) 
 	then
-		Transaction fact0 = new Transaction();
-		fact0.setType( "MUTUAL-FUNDS-COST-BASIS-SETTINGS" );
-		fact0.setProductCode( "10" );
-		insertLogical( fact0 );
 end
