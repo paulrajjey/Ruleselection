@@ -1,8 +1,8 @@
 package com.myspace.ruleselection;
 
-import org.drools.spi.KnowledgeHelper;
-
-function boolean checkTaxonomy(KnowledgeHelper droolscontext, String taxonomy) {
+//import org.drools.spi.KnowledgeHelper;
+//KnowledgeHelper droolscontext
+function boolean checkTaxonomy(String taxonomy) {
     
     String taxonomyvalue = (String) droolscontext.getGlobal(taxonomy);
     
