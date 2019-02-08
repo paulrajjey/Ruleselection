@@ -1,7 +1,8 @@
 import org.drools.spi.KnowledgeHelper;
 
-function boolean checkTaxonomy(KnowledgeHelper drools) {
+function boolean checkTaxonomy(KnowledgeHelper drools,String taxonomy) {
     
+    String taxonomyvalue = (String) drools.getGlobal(taxonomy);
     
-    return "Hello "+name+"!";
+    return true;
 }
