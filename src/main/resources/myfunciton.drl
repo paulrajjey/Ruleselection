@@ -6,3 +6,5 @@ function boolean checkTaxonomy(KnowledgeHelper drools,String taxonomy) {
     
     return true;
 }
+
+
