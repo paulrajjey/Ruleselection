@@ -18,11 +18,12 @@ function boolean checkTaxonomy(Object channel , String taxonomy) {
     Object txValue1 = kdrools.getKieRuntime().getGlobal("TaxonomyValue");//ID
      System.out.println("TaxonomyValue" + txValue1);*/
     //  System.out.println("meta Rules " + kdrools.getRule() );
-    List channels = (List)channel;
+   
     // Map<String, Object> metaData =  rule.getMetaData();
      
     // System.out.println("meta data " + kdrools.getRule().getName() + "-" + (List)metaData.get("channel")  );
      
+     List channels = (List)channel;
      boolean isenabled = channels.contains(taxonomy);
     
     return isenabled;
