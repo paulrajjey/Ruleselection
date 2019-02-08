@@ -14,8 +14,8 @@ function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
 
 function boolean checkTaxonomy1(KnowledgeHelper kdrools ) {
 
-    String tx = (String)kdrools.getKieRuntime().getGlobal("Taxonomy");
-    String txValue = (String)kdrools.getKieRuntime().getGlobal("TaxonomyValue");
+    String tx = (String)kdrools.getKieRuntime().getGlobal("Taxonomy");//channel
+    String txValue = (String)kdrools.getKieRuntime().getGlobal("TaxonomyValue");//IWC
     Map<String, Object> metaData =  kdrools.getRule().getMetaData();
     boolean enabled = false;
     if (metaData.get(tx).contains(txValue)) {
@@ -46,6 +46,7 @@ end
 rule "Row 2 EligibilityRules"
 	@channel("IWC","UD")
 	dialect "mvel"
+	enabled(checkTaxonomy1(drools))
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-EXCHANGE" , productCode == "6" )
 	then
@@ -55,6 +56,7 @@ end
 //from row number: 3
 rule "Row 3 EligibilityRules"
 	@channel("UD")
+	enabled(checkTaxonomy1(drools))
 	dialect "mvel"
 	when
 		trans : Transaction( type == "MUTUAL-FUNDS-PURCHASE" , productCode == "10" )
@@ -64,6 +66,7 @@ end
 
 //from row number: 4
 rule "Row 4 EligibilityRules"
+    enabled(checkTaxonomy1(drools))
 	@channel("IWC")
 	dialect "mvel"
 	when
