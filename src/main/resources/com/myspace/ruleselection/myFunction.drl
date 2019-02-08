@@ -4,6 +4,7 @@ package com.myspace.ruleselection;
 import org.drools.core.spi.KnowledgeHelper;
 import java.util.Map;
 import java.util.List;
+
 function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
 
    String tx1 = (String)kdrools.getKieRuntime().getGlobal("Taxonomy");//channel
@@ -32,7 +33,7 @@ function boolean checkTaxonomy1(KnowledgeHelper kdrools ) {
     Map<String, Object> metaData =  kdrools.getRule().getMetaData();
     boolean enabled = ( (List)metaData.get(tx) ).contains(txValue);
 
-    return false;
+    return enabled;
     
     
 }
