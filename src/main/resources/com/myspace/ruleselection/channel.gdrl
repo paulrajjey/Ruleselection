@@ -1,4 +1,4 @@
 package com.myspace.ruleselection;
 
-global java.lang.String channel;
-global java.lang.String channelValue;
+global java.lang.String Taxonomy;
+global java.lang.String TaxonomyValue;
