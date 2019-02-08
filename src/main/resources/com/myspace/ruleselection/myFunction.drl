@@ -7,39 +7,15 @@ import java.util.List;
 global java.lang.String Taxonomy;
 global java.lang.String TaxonomyValue;
 
-//function boolean checkTaxonomy(KnowledgeHelper kdrools , String taxonomy) {
 function boolean checkTaxonomy(Object channel , String taxonomy) {
 
-  /*Object tx1 = kdrools.getKieRuntime().getGlobal("Taxonomy");//channel
-    System.out.println("Taxonomy" + tx1);
-    Object txValue1 = kdrools.getKieRuntime().getGlobal("TaxonomyValue");//ID
-     System.out.println("TaxonomyValue" + txValue1);*/
-    //  System.out.println("meta Rules " + kdrools.getRule() );
-   
-    // Map<String, Object> metaData =  rule.getMetaData();
-     
-    // System.out.println("meta data " + kdrools.getRule().getName() + "-" + (List)metaData.get("channel")  );
-     
+
      List channels = (List)channel;
      boolean isenabled = channels.contains(taxonomy);
     
     return isenabled;
   
 }
-
-/*function boolean checkTaxonomy1(RuleContext kdrools ) {
-
-    Object tx = kdrools.getKieRuntime().getGlobal("Taxonomy");//channel
-    System.out.println("Taxonomy" + tx);
-    Object txValue = kdrools.getKieRuntime().getGlobal("TaxonomyValue");//ID
-     System.out.println("TaxonomyValue" + txValue);
-    Map<String, Object> metaData =  kdrools.getRule().getMetaData();
-    boolean enabled = ( (List)metaData.get(tx) ).contains(txValue);
-
-    return enabled;
-    
-    
-}*/
 
 //from row number: 1
 rule "Row 1 EligibilityRules"
