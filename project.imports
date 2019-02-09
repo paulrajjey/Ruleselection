@@ -28,6 +28,9 @@
       <import>
         <type> org.drools.runtime.rule.RuleContext</type>
       </import>
+      <import>
+        <type>com.myspace.ruleselection.TaxonomyWorkItemHandler</type>
+      </import>
     </imports>
   </imports>
   <version>1.0</version>
