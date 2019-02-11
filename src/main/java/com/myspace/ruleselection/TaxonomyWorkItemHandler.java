@@ -37,8 +37,8 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		
 	    String  taxonomy = (String) workItem.getParameter("taxonomy");
 		String  taxonomyValue = (String) workItem.getParameter("value");
-		//ProcessContext kcontext = (ProcessContext) workItem.getParameter("param1");
-		KieSession ksession = (KieSession)workItem.getParameter("param1");
+		ProcessContext kcontext = (ProcessContext) workItem.getParameter("param1");
+		//KieSession ksession = (KieSession)workItem.getParameter("param1");
 		//KieSession ksession = (KieSession) kcontext.getKieRuntime();
 			//	).fireAllRules();
 		//AgentaFilterImp agenta = new AgentaFilterImp(taxonomy,taxonomyValue);
