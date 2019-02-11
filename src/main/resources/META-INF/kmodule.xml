@@ -2,7 +2,10 @@
   <kbase name="kbase" default="true" eventProcessingMode="stream" equalsBehavior="identity">
     <ksession name="ksession" type="stateful" default="true" clockType="realtime">
       <workItemHandlers>
-        <workItemHandler type="new com.workitem.TaxonomyWorkItenHanlder(ksession)" name="Taxonomy"/>
+      <resolver>reflection</resolver>
+        <!--workItemHandler type="new com.workitem.TaxonomyWorkItenHanlder(ksession)" name="Taxonomy"/-->
+        <identifier>new com.workitem.TaxonomyWorkItenHanlder(ksession)</identifier>
+        <name>Taxonomy</name>
       </workItemHandlers>
     </ksession>
   </kbase>
