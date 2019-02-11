@@ -35,7 +35,7 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 
     public void executeWorkItem(WorkItem workItem, WorkItemManager manager) {
 		
-	    String  taxonomy = (String) workItem.getParameter("Taxonomy");
+	    String  taxonomy = (String) workItem.getParameter("taxonomy");
 		String  taxonomyValue = (String) workItem.getParameter("value");
 		ProcessContext kcontext = (ProcessContext) workItem.getParameter("param1");
 		KieSession ksession = (KieSession) kcontext.getKieRuntime();
