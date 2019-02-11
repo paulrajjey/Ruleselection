@@ -11,6 +11,7 @@ function boolean checkTaxonomy(Object channel , String taxonomy) {
 
      List channels = (List)channel;
      boolean isenabled = channels.contains(taxonomy);
+     System.out.println("checkTaxonomy value" + taxonomy);
     System.out.println("checkTaxonomy" + isenabled);
     return isenabled;
   
