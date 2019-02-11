@@ -50,6 +50,9 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 			System.out.println("objec1111122221---> " );
 			System.out.println("objec111111---> " +  o == null + "value of" );
 	        System.out.println("objec2---> " + o );
+	        if( o != null){
+	        	ksession.insert(o);
+	        }
 		}
 		ksession.fireAllRules();
 		   
