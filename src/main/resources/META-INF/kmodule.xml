@@ -4,6 +4,10 @@
       <workItemHandlers>
         <workItemHandler type="com.myspace.ruleselection.TaxonomyWorkItemHandler" name="Taxonomy"/>
       </workItemHandlers>
+      <listeners>
+        <agendaEventListener type="com.workitem.AgentaLister"/>
+        <processEventListener type="com.workitem.SessionCleanUpProcessListener"/>
+      </listeners>
     </ksession>
   </kbase>
 </kmodule>
