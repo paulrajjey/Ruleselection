@@ -47,7 +47,7 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		System.out.println("in workitem handler" );
 		Collection<?> obj =  ksession.getObjects();
 		for(Object o : obj){
-			
+			System.out.println("objec1111122221---> " );
 			System.out.println("objec111111---> " +  o == null + "value of" );
 	        System.out.println("objec2---> " + o );
 		}
