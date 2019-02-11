@@ -5,8 +5,8 @@
         <workItemHandler type="com.myspace.ruleselection.TaxonomyWorkItemHandler" name="Taxonomy"/>
       </workItemHandlers>
       <listeners>
-        <agendaEventListener type="com.workitem.AgentaLister"/>
-        <processEventListener type="com.workitem.SessionCleanUpProcessListener"/>
+        <agendaEventListener type="com.myspace.ruleselection.AgentaLister"/>
+        <processEventListener type="com.myspace.ruleselection.SessionCleanUpProcessListener"/>
       </listeners>
     </ksession>
   </kbase>
