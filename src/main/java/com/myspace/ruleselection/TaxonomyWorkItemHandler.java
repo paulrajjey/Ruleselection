@@ -44,7 +44,9 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		//ksession.get
 		ksession.setGlobal("Taxonomy", taxonomy);
 		ksession.setGlobal("TaxonomyValue", taxonomyValue);
-		System.out.println("in workitem handler" + taxonomyValue );
+		System.out.println("in workitem handler-taxonomy - > " + taxonomyValue );
+	    System.out.println("in workitem handler-taxonomy - > " + taxonomy );
+
 		Collection<?> obj =  ksession.getObjects();
 		for(Object o : obj){
 			System.out.println("objec1111122221---> " );
