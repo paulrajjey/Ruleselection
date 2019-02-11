@@ -48,8 +48,8 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		Collection<?> obj =  ksession.getObjects();
 		for(Object o : obj){
 			
-			System.out.println("objec1" +  o == null );
-	        System.out.println("objec2" + o );
+			System.out.println("objec1---> " +  o == null );
+	        System.out.println("objec2---> " + o );
 		}
 		ksession.fireAllRules();
 		   
