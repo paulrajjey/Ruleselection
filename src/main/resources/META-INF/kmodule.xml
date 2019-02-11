@@ -1,5 +1,12 @@
 <kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <kbase name="kbase" default="true" eventProcessingMode="stream" equalsBehavior="identity">
+  <kbase name="rkbase" default="true" eventProcessingMode="stream" equalsBehavior="identity">
+    <ksession name="rksession" type="stateless" default="true" clockType="realtime">
+      <listeners>
+        <agendaEventListener type="com.myspace.ruleselection.AgentaLister"/>
+      </listeners>
+    </ksession>
+  </kbase>
+  <kbase name="kbase" default="false" eventProcessingMode="stream" equalsBehavior="identity">
     <ksession name="ksession" type="stateful" default="true" clockType="realtime">
       <workItemHandlers>
         <workItemHandler type="com.myspace.ruleselection.TaxonomyWorkItemHandler" name="Taxonomy"/>
