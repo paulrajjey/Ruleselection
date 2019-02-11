@@ -49,7 +49,8 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		System.out.println("in workitem handler-taxonomy - > " + taxonomyValue );
 	    System.out.println("in workitem handler-taxonomy - > " + taxonomy );
         ksession.insert(trans);
-		Collection<?> obj =  ksession.getObjects();
+		ksession.fireAllRules();
+	/*	Collection<?> obj =  ksession.getObjects();
 		for(Object o : obj){
 		
 	        if( o != null){
@@ -58,7 +59,7 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 	        	ksession.insert(o);
 	        }
 		}
-		ksession.fireAllRules();
+		ksession.fireAllRules();*/
 		   
 	    manager.completeWorkItem(workItem.getId(), null);
 	}
