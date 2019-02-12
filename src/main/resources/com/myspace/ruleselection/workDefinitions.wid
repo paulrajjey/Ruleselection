@@ -4,8 +4,7 @@
     "parameters" : [ 
         "taxonomy" : new StringDataType(), 
         "value" : new StringDataType(), 
-        "param1" : new ObjectDataType(),
-        "param2" : new StringDataType(), 
+        "facts" : new ObjectDataType(),
     ], 
     "results" : [ 
         "Result" : new ObjectDataType("java.util.List") 
