@@ -9,10 +9,5 @@
         <processEventListener type="com.myspace.ruleselection.SessionCleanUpProcessListener"/>
       </listeners>
     </ksession>
-    <ksession name="kstateless" type="stateless" default="false" clockType="realtime">
-      <listeners>
-        <agendaEventListener type="com.myspace.ruleselection.AgentaLister"/>
-      </listeners>
-    </ksession>
   </kbase>
 </kmodule>
