@@ -32,6 +32,8 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
     static final long serialVersionUID = 1L;
     
     private KieSession ksession;
+    private KieContainer kContainer;
+    
     //private StatelessKieSession ksession;
     
     public TaxonomyWorkItemHandler() {
@@ -48,9 +50,10 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		Transaction  trans = (Transaction) workItem.getParameter("param2");
 		//ProcessContext kcontext = (ProcessContext) workItem.getParameter("param1");
 	    //KieSession ksession = (KieSession) kcontext.getKieRuntime();
-	    
-	    KieServices ks = KieServices.Factory.get();
-        KieContainer kContainer = ks.getKieClasspathContainer(TaxonomyWorkItemHandler.class.getClassLoader());
+	    if(this.kContainer == null){
+	        KieServices ks = KieServices.Factory.get();
+            kContainer = ks.getKieClasspathContainer(TaxonomyWorkItemHandler.class.getClassLoader());
+	    }
         StatelessKieSession stateless  = kContainer.newStatelessKieSession("rksession");	
 	   	stateless.setGlobal("Taxonomy", taxonomy);
 		stateless.setGlobal("TaxonomyValue", taxonomyValue);
