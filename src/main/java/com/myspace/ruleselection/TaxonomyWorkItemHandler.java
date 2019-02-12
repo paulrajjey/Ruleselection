@@ -37,9 +37,8 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
     
     public TaxonomyWorkItemHandler() {
         
-        KieServices ks = KieServices.Factory.get();
-        kContainer = ks.getKieClasspathContainer(TaxonomyWorkItemHandler.class.getClassLoader());
-        
+        KieServiceskContainer = KieServices.Factory.get().getKieClasspathContainer(TaxonomyWorkItemHandler.class.getClassLoader());
+
     }
     
     
