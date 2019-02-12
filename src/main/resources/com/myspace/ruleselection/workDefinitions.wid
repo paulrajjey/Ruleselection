@@ -3,7 +3,7 @@
     "name" : "Taxonomy", 
     "parameters" : [ 
         "taxonomy" : new StringDataType(), 
-        "value" : new StringDataType(), 
+        "taxonomyValue" : new StringDataType(), 
         "facts" : new ObjectDataType(),
     ], 
     "results" : [ 
