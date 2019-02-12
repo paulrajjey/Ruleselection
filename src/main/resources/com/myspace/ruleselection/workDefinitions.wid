@@ -8,7 +8,7 @@
         "param2" : new StringDataType(), 
     ], 
     "results" : [ 
-        "Result" : new ObjectDataType("java.util.Map") 
+        "Result" : new ObjectDataType("java.util.List") 
     ], 
     "displayName" : "Taxonomy", 
     "icon" : "" 
