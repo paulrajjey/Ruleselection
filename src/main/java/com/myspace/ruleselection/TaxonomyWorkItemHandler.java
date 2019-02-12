@@ -39,18 +39,20 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		String  taxonomyValue = (String) workItem.getParameter("value");
 		Transaction  trans = (Transaction) workItem.getParameter("param2");
 		ProcessContext kcontext = (ProcessContext) workItem.getParameter("param1");
-		//KieSession ksession = (KieSession)workItem.getParameter("param1");
 	    KieSession ksession = (KieSession) kcontext.getKieRuntime();
-			//	).fireAllRules();
-		//AgentaFilterImp agenta = new AgentaFilterImp(taxonomy,taxonomyValue);
-		//ksession.get
-		ksession.setGlobal("Taxonomy", taxonomy);
+	    
+	    StatelessKieSession stateless = ksession.getKieBase().newStatelessKieSession();
+
+		stateless.setGlobal("Taxonomy", taxonomy);
+		stateless.setGlobal("TaxonomyValue", taxonomyValue);
+
+	/*	ksession.setGlobal("Taxonomy", taxonomy);
 		ksession.setGlobal("TaxonomyValue", taxonomyValue);
 		System.out.println("in workitem handler-taxonomy - > " + taxonomyValue );
 	    System.out.println("in workitem handler-taxonomy - > " + taxonomy );
         ksession.insert(trans);
 		ksession.fireAllRules();
-	/*	Collection<?> obj =  ksession.getObjects();
+     	Collection<?> obj =  ksession.getObjects();
 		for(Object o : obj){
 		
 	        if( o != null){
