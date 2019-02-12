@@ -55,8 +55,7 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		stateless.setGlobal("Taxonomy", taxonomy);
 		stateless.setGlobal("TaxonomyValue", taxonomyValue);
 
-		facts.add(trans);
-		stateless.execute(facts);
+		stateless.execute(trans);
         Map result = new HashMap();
         result.put("Result",result);
 	    manager.completeWorkItem(workItem.getId(), result);
