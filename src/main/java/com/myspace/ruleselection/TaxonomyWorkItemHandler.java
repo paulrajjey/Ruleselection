@@ -19,6 +19,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import com.myspace.ruleselection.AgentaLister;
+import org.kie.api.KieServices;
+import org.kie.api.runtime.KieContainer;
 
 
 /**
@@ -47,8 +49,13 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		ProcessContext kcontext = (ProcessContext) workItem.getParameter("param1");
 	    KieSession ksession = (KieSession) kcontext.getKieRuntime();
 	    
-	    StatelessKieSession stateless = ksession.getKieBase().newStatelessKieSession();
+	    KieServices ks = KieServices.Factory.get();
+        KieContainer kContainer = ks.getKieClasspathContainer(TaxonomyWorkItenHanlder.class.getClassLoader());
+        StatelessKieSession stateless  = kContainer.newStatelessKieSession("rksession");	
+	    
+	   // StatelessKieSession stateless = ksession.getKieBase().newStatelessKieSession();
 	    AgentaLister agendaEventListener = new AgentaLister();
+	 
         stateless.addEventListener(agendaEventListener);
 		stateless.setGlobal("Taxonomy", taxonomy);
 		stateless.setGlobal("TaxonomyValue", taxonomyValue);
