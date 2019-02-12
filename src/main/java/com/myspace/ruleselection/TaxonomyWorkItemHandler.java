@@ -43,9 +43,7 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
         
     }
     
-    public TaxonomyWorkItemHandler(KieSession ksession) {
-        this.ksession = ksession;
-    }
+    
 
     public void executeWorkItem(WorkItem workItem, WorkItemManager manager) {
 		
