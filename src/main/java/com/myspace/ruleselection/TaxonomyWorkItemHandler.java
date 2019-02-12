@@ -33,7 +33,7 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 
     static final long serialVersionUID = 1L;
     
-    private KieContainer kContainer;
+    //private KieContainer kContainer;
 
     public void executeWorkItem(WorkItem workItem, WorkItemManager manager) {
 		
@@ -41,9 +41,8 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		String  taxonomyValue = (String) workItem.getParameter("taxonomyValue");
 		List trans = (List) workItem.getParameter("facts");
 		
-		if(this.kContainer == null){
-		    kContainer = KieServices.Factory.get().getKieClasspathContainer(TaxonomyWorkItemHandler.class.getClassLoader().getParent());
-		}
+	    KieContainer  kContainer = KieServices.Factory.get().getKieClasspathContainer(TaxonomyWorkItemHandler.class.getClassLoader().getParent());
+		
 		
 		StatelessKieSession stateless  = kContainer.newStatelessKieSession("rksession");
 	 
