@@ -60,8 +60,7 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		facts.add(trans);
 		stateless.execute(facts);
 
-		ksession.fireAllRules();*/
-		   
+
 	    manager.completeWorkItem(workItem.getId(), null);
 	}
 
