@@ -1,11 +1,4 @@
 <kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <kbase name="rkbase" default="false" eventProcessingMode="stream" equalsBehavior="identity">
-    <ksession name="rksession" type="stateless" default="true" clockType="realtime">
-      <listeners>
-        <agendaEventListener type="com.myspace.ruleselection.AgentaLister"/>
-      </listeners>
-    </ksession>
-  </kbase>
   <kbase name="kbase" default="true" eventProcessingMode="stream" equalsBehavior="identity">
     <ksession name="ksession" type="stateful" default="true" clockType="realtime">
       <workItemHandlers>
@@ -14,6 +7,11 @@
       <listeners>
         <agendaEventListener type="com.myspace.ruleselection.AgentaLister"/>
         <processEventListener type="com.myspace.ruleselection.SessionCleanUpProcessListener"/>
+      </listeners>
+    </ksession>
+    <ksession name="kstateless" type="stateless" default="false" clockType="realtime">
+      <listeners>
+        <agendaEventListener type="com.myspace.ruleselection.AgentaLister"/>
       </listeners>
     </ksession>
   </kbase>
