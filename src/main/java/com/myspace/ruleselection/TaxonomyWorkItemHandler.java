@@ -18,6 +18,8 @@ import org.kie.api.runtime.StatelessKieSession;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import com.myspace.ruleselection.AgentaLister;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
@@ -38,7 +40,6 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
         KieServices ks = KieServices.Factory.get();
         kContainer = ks.getKieClasspathContainer();
         
-        
     }
     
     
@@ -56,9 +57,9 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 
 		facts.add(trans);
 		stateless.execute(facts);
-
-
-	    manager.completeWorkItem(workItem.getId(), null);
+        Map result = new HashMap();
+        result.put("Result",result);
+	    manager.completeWorkItem(workItem.getId(), result);
 	}
 
 	public void abortWorkItem(WorkItem workItem, WorkItemManager manager) {
