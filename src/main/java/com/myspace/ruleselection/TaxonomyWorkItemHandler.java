@@ -15,6 +15,9 @@ import org.drools.core.spi.ProcessContext;
 import java.util.Collection;
 import com.myspace.ruleselection.Transaction;
 import org.kie.api.runtime.StatelessKieSession;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 
 /**
@@ -47,6 +50,10 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 
 		stateless.setGlobal("Taxonomy", taxonomy);
 		stateless.setGlobal("TaxonomyValue", taxonomyValue);
+
+		List facts = new ArrayList();
+		facts.add(trans);
+		stateless.execute(facts);
 
 	/*	ksession.setGlobal("Taxonomy", taxonomy);
 		ksession.setGlobal("TaxonomyValue", taxonomyValue);
