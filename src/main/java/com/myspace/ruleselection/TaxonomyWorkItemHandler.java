@@ -50,7 +50,7 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 	    KieSession ksession = (KieSession) kcontext.getKieRuntime();
 	    
 	    KieServices ks = KieServices.Factory.get();
-        KieContainer kContainer = ks.getKieClasspathContainer(TaxonomyWorkItenHanlder.class.getClassLoader());
+        KieContainer kContainer = ks.getKieClasspathContainer(TaxonomyWorkItemHandler.class.getClassLoader());
         StatelessKieSession stateless  = kContainer.newStatelessKieSession("rksession");	
 	    
 	   // StatelessKieSession stateless = ksession.getKieBase().newStatelessKieSession();
