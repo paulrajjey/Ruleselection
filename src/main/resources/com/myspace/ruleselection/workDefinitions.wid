@@ -7,7 +7,7 @@
         "input" : new ObjectDataType(),
     ], 
     "results" : [ 
-        "Result" : new ObjectDataType("java.util.List") 
+        "Result" : new ObjectDataType() 
     ], 
     "displayName" : "Taxonomy", 
     "icon" : "" 
