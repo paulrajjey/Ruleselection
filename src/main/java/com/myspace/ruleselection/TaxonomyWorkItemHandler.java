@@ -54,9 +54,9 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
         StatelessKieSession stateless  = kContainer.newStatelessKieSession("rksession");	
 	    
 	   // StatelessKieSession stateless = ksession.getKieBase().newStatelessKieSession();
-	    AgentaLister agendaEventListener = new AgentaLister();
+	    //AgentaLister agendaEventListener = new AgentaLister();
 	 
-        stateless.addEventListener(agendaEventListener);
+        //stateless.addEventListener(agendaEventListener);
 		stateless.setGlobal("Taxonomy", taxonomy);
 		stateless.setGlobal("TaxonomyValue", taxonomyValue);
 
