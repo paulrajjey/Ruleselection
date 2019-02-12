@@ -39,7 +39,7 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		
 	    String  taxonomy = (String) workItem.getParameter("taxonomy");
 		String  taxonomyValue = (String) workItem.getParameter("taxonomyValue");
-		Object tran = (Object) workItem.getParameter("input");
+		Collection tran = (Collection) workItem.getParameter("input");
 		
 		List trans = new ArrayList(tran);
 		
