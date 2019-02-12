@@ -18,6 +18,7 @@ import org.kie.api.runtime.StatelessKieSession;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import com.myspace.ruleselection.AgendaEventListener;
 
 
 /**
@@ -47,7 +48,8 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 	    KieSession ksession = (KieSession) kcontext.getKieRuntime();
 	    
 	    StatelessKieSession stateless = ksession.getKieBase().newStatelessKieSession();
-
+	    AgendaEventListener agendaEventListener = new AgendaEventListener();
+        stateless.addEventListener(agendaEventListener);
 		stateless.setGlobal("Taxonomy", taxonomy);
 		stateless.setGlobal("TaxonomyValue", taxonomyValue);
 
