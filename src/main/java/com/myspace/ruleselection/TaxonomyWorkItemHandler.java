@@ -41,7 +41,7 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		String  taxonomyValue = (String) workItem.getParameter("taxonomyValue");
 		Map tran = (Map) workItem.getParameter("input");
 		
-		List trans = new ArrayList(Map.values);
+		List trans = new ArrayList(tran.values());
 		
 	    KieContainer  kContainer = KieServices.Factory.get().getKieClasspathContainer(TaxonomyWorkItemHandler.class.getClassLoader());
 		
