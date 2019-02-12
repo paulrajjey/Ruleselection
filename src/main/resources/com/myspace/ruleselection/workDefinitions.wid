@@ -4,10 +4,10 @@
     "parameters" : [ 
         "taxonomy" : new StringDataType(), 
         "taxonomyValue" : new StringDataType(), 
-        "input" : new ObjectDataType(),
+        "facts" : new ObjectDataType("java.util.List"),
     ], 
     "results" : [ 
-        "Result" : new ObjectDataType() 
+        "Result" : new ObjectDataType("java.util.List") 
     ], 
     "displayName" : "Taxonomy", 
     "icon" : "" 
