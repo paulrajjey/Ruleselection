@@ -34,12 +34,6 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
     static final long serialVersionUID = 1L;
     
     private KieContainer kContainer;
-    
-    public TaxonomyWorkItemHandler() {
-        
-    }
-    
-    
 
     public void executeWorkItem(WorkItem workItem, WorkItemManager manager) {
 		
