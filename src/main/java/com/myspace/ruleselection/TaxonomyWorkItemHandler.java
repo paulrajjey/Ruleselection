@@ -39,9 +39,8 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		
 	    String  taxonomy = (String) workItem.getParameter("taxonomy");
 		String  taxonomyValue = (String) workItem.getParameter("taxonomyValue");
-		Transaction trans = (Transaction) workItem.getParameter("input");
+		java.util.List trans = (java.util.List) workItem.getParameter("facts");
 		
-
 	    KieContainer  kContainer = KieServices.Factory.get().getKieClasspathContainer(TaxonomyWorkItemHandler.class.getClassLoader());
 		
 		
@@ -49,9 +48,7 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 	 
 		stateless.setGlobal("Taxonomy", taxonomy);
 		stateless.setGlobal("TaxonomyValue", taxonomyValue);
-        if(trans!=null){
-            System.out.println("not null");
-        }
+
 		stateless.execute(trans);
         Map result = new HashMap();
         result.put("Result",result);
