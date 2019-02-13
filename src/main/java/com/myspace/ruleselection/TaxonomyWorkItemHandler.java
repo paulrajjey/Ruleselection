@@ -53,7 +53,6 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 
 		stateless.execute(trans);
         Map result = new HashMap();
-        result.put("Result",);
         result.put("Result",trans);
 	    manager.completeWorkItem(workItem.getId(), result);
 	}
