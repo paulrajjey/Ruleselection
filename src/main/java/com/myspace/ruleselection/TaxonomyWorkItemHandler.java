@@ -33,11 +33,9 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 
     static final long serialVersionUID = 1L;
     
-    private KieContainer kContainer;
+    private static KieContainer kContainer = KieServices.Factory.get().getKieClasspathContainer(TaxonomyWorkItemHandler.class.getClassLoader());;
 
     public TaxonomyWorkItemHandler() {
-		super();
-	    kContainer = KieServices.Factory.get().getKieClasspathContainer(TaxonomyWorkItemHandler.class.getClassLoader());
 		// TODO Auto-generated constructor stub
 	}
     public void executeWorkItem(WorkItem workItem, WorkItemManager manager) {
