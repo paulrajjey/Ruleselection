@@ -46,9 +46,6 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		String  taxonomyValue = (String) workItem.getParameter("taxonomyValue");
 		java.util.List trans = (java.util.List) workItem.getParameter("facts");
 		
-	    KieContainer  kContainer = KieServices.Factory.get().getKieClasspathContainer(TaxonomyWorkItemHandler.class.getClassLoader());
-		
-		
 		StatelessKieSession stateless  = kContainer.newStatelessKieSession("rksession");
 	 
 		stateless.setGlobal("Taxonomy", taxonomy);
