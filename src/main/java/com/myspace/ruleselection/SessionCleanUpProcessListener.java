@@ -10,6 +10,10 @@ import org.kie.api.event.process.ProcessStartedEvent;
 import org.kie.api.event.process.ProcessVariableChangedEvent;
 import org.kie.api.runtime.KieRuntime;
 import org.kie.api.runtime.rule.FactHandle;
+import java.util.Collection;
+import java.util.Map.Entry;
+
+import org.drools.core.base.MapGlobalResolver;
 
 public class SessionCleanUpProcessListener implements ProcessEventListener {
 
