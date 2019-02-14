@@ -57,8 +57,12 @@ public class SessionCleanUpProcessListener implements ProcessEventListener {
 	        Entry<String, Object>[] entries = globals.getGlobals();
 	        for (Entry<String, Object> nextEntry : entries) {
 	            System.out.println("key " + nextEntry.getKey());
-	            System.out.println("key value " + ((com.myspace.ruleselection.Transaction)nextEntry.getValue()).isEligibility());
-
+	            java.util.List ls = (java.util.List)nextEntry.getValue();
+	            for (int i =0; i < ls.size(); i++ ){
+	               com.myspace.ruleselection.Transaction ts =  (com.myspace.ruleselection.Transaction)ls.get(i);
+	                System.out.println("key value " + i  + " " + ts.isEligibility();
+	            }
+	            
 	        }
 
 	}
