@@ -47,7 +47,10 @@ public class TaxonomyWorkItemHandler implements WorkItemHandler ,java.io.Seriali
 		java.util.List trans = (java.util.List) workItem.getParameter("facts");
 		
 		StatelessKieSession stateless  = kContainer.newStatelessKieSession("rksession");
-	 
+	    if (stateless == null){
+	        kContainer = KieServices.Factory.get().newKieClasspathContainer(TaxonomyWorkItemHandler.class.getClassLoader());
+	        stateless  = kContainer.newStatelessKieSession("rksession");
+	    }
 		stateless.setGlobal("Taxonomy", taxonomy);
 		stateless.setGlobal("TaxonomyValue", taxonomyValue);
 
