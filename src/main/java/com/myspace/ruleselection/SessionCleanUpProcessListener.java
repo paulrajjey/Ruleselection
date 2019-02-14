@@ -49,6 +49,13 @@ public class SessionCleanUpProcessListener implements ProcessEventListener {
 		    for (Entry<String, Object> nextEntry : entries) {
 		        nextEntry.setValue(null);
 		    }*/
+		    MapGlobalResolver globals = (MapGlobalResolver) kruntime.getGlobals();
+	        Entry<String, Object>[] entries = globals.getGlobals();
+	        for (Entry<String, Object> nextEntry : entries) {
+	            System.out.println("key " + nextEntry.getKey());
+	            System.out.println("key value " + nextEntry.getValue());
+
+	        }
 
 	}
 
